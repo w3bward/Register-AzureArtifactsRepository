@@ -2,7 +2,7 @@
 Registers an Azure Artifacts feed as a PS repository using the Artifacts Credential Provider with a PAT for authentication
 
 ## Why did I write this script?
-Because as many people have noticed after reading the [dev blog post](https://devblogs.microsoft.com/powershell/using-powershellget-with-azure-artifacts/) announcing the ability to use Azure Artifacts as a private Powershell Repository, the authentication is incredibly buggy. The most reliable way to authenticate is to store a PAT as an environment variable, but even this has a number of prerequisites that aren't well documented in any one place. This script handles the prerequisites, creates the environment variable, and registers the PS Repository.
+As many people have noticed after reading the [dev blog post](https://devblogs.microsoft.com/powershell/using-powershellget-with-azure-artifacts/) announcing the ability to use Azure Artifacts as a private Powershell Repository, the authentication is incredibly buggy. The most reliable way to authenticate is to store a PAT as an environment variable, but even this has a number of prerequisites that aren't well documented in any one place. This script handles the prerequisites, creates the environment variable, and registers the PS Repository.
 
 While I have tried to make this script as easy to use as possible, that does not mean that it is foolproof. Please understand what this script does, and that you assume responsibility for any problems that may arise from running it. This script stores an access token as a persistent user environment variable on the machine it runs on, this may not be appropriate for the security requirements of some environments.
 
