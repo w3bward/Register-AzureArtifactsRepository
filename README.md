@@ -15,6 +15,8 @@ While I have tried to make this script as easy to use as possible, that does not
 6. Registers a package source, and PS repository with the specifed name and URL
 
 ## How to use this script.
+Please note that this script is only designed to work on Windows at the moment.
+
 1. [Get a PAT](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page#create-a-pat) that has Packaging permissions. I recommend setting the expiration to the max (1 year), you will need to run this script again or update the VSS_NUGET_EXTERNAL_FEED_ENDPOINTS environment variable manually when the token expires.
 2. Find the URI for your Azure Artifacts feed. Note: you must use the v2 endpoint, PowershellGet does not work with v3. It should look something like `https://pkgs.dev.azure.com/{organization}/_packaging/{feedname}/nuget/v2` or `https://{organization}.pkgs.visualstudio.com/_packaging/{feedname}/nuget/v2` depending on which URL scheme your organization uses.
 3. Run the script:
